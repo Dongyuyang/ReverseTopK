@@ -21,7 +21,8 @@ int main()
 
     /*Reverse top-k query*/
     /*return a vector of w's*/
-    auto ws = dyy::RTK::rtkmethod(data.RtreeP, data.RtreeW, 20, q);
+    int k = 20;
+    auto ws = dyy::RTK::rtkmethod(data.RtreeP, data.RtreeW, k, q);
 
     std::cout << ws.size();
 
