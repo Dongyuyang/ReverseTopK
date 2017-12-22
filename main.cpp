@@ -21,10 +21,12 @@ int main()
 
     /*Reverse top-k query*/
     /*return a vector of w's*/
-    int k = 20;
-    auto ws = dyy::RTK::rtkmethod(data.RtreeP, data.RtreeW, k, q);
+    // auto rtk = dyy::RTK::rtkmethod(data.RtreeP, data.RtreeW, 10, q );
 
-    std::cout << ws.size();
+    /*Reverse k-rank query*/
+    /*return w id and rank*/
+    auto rkr = dyy::RTK::rkrmethod(data.RtreeP, data.RtreeW,q,10);
+    dyy::RTK::print_map(rkr);
 
     return 1;
 }
